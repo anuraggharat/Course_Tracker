@@ -1,9 +1,14 @@
 import "./App.css";
+import { Button, ButtonGroup } from "@chakra-ui/react";
+import TopNavbar from "./Components/TopNavbar";
+import { Container } from "@chakra-ui/react";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Container maxW="5xl" padding="10">
+        <TopNavbar />
+      </Container>
     </div>
   );
 }
