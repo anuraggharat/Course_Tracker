@@ -8,13 +8,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, AddIcon } from "@chakra-ui/icons";
+import NewTut from "./NewTut";
 
 export default function TopNavbar() {
   return (
     <div className="flex justify-bet">
-      <Button rightIcon={<AddIcon />} colorScheme="teal" variant="solid">
-        Add a new Tutorial
-      </Button>
+      <NewTut />
       <Heading>Tutorial Tracker</Heading>
       <Menu colorScheme="teal">
         <MenuButton

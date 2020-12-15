@@ -47,7 +47,7 @@ export default function TutCard() {
       <SimpleGrid columns={2} spacing={5} textAlign="center" marginTop="20px">
         <Center>
           <Box>
-            <Text>length</Text>
+            <Text color={"grey"}>length</Text>
             <Text fontSize="xl" className="teal-color">
               1Hr
             </Text>
@@ -55,7 +55,7 @@ export default function TutCard() {
         </Center>
         <Center>
           <Box>
-            <Text>category</Text>
+            <Text color={"grey"}>category</Text>
             <Text fontSize="xl" className="teal-color">
               WEBSITE
             </Text>
@@ -67,28 +67,13 @@ export default function TutCard() {
           TAGS
         </Text>
         <HStack spacing={2}>
-          <Tag
-            size="sm"
-            borderRadius="full"
-            variant="outline"
-            colorScheme="teal"
-          >
+          <Tag size="sm" borderRadius="full" variant="solid" colorScheme="teal">
             <TagLabel>React</TagLabel>
           </Tag>
-          <Tag
-            size="sm"
-            borderRadius="full"
-            variant="outline"
-            colorScheme="teal"
-          >
+          <Tag size="sm" borderRadius="full" variant="solid" colorScheme="teal">
             <TagLabel>React</TagLabel>
           </Tag>
-          <Tag
-            size="sm"
-            borderRadius="full"
-            variant="outline"
-            colorScheme="teal"
-          >
+          <Tag size="sm" borderRadius="full" variant="solid" colorScheme="teal">
             <TagLabel>React</TagLabel>
           </Tag>
         </HStack>
@@ -103,7 +88,7 @@ export default function TutCard() {
           <Button
             rightIcon={<ArrowForwardIcon />}
             colorScheme="teal"
-            variant="outline"
+            variant="solid"
             size="xs"
           >
             Go to course
