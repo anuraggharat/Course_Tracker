@@ -5,3 +5,9 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.content {
+  margin-top: 75px;
+}
+.teal-color {
+  color: teal !important;
+}
