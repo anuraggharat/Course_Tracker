@@ -1,0 +1,16 @@
+.float-btn {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+.display-7 {
+  font-size: 2rem;
+}
+.pill {
+  padding: 5px 20px;
+  font-size: 15px;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+}
