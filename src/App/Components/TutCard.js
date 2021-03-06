@@ -29,8 +29,8 @@ export default function TutCard({ item, loadCourses }) {
   };
 
   return (
-    <div className="col-lg-6 col-sm-12 my-3">
-      <Card className="border-0 shadow  ">
+    <div className="col-lg-6  col-sm-12 my-3">
+      <Card className="border-0 shadow rounded  ">
         <CardBody>
           <CardTitle
             tag="h4"

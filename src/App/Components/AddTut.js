@@ -73,7 +73,11 @@ export default function AddTut(props) {
   };
   return (
     <div>
-      <Modal isOpen={props.modal} toggle={props.toggle}>
+      <Modal
+        isOpen={props.modal}
+        toggle={props.toggle}
+        modalClassName="bg-dark"
+      >
         <ModalHeader>Add a new Tutorial</ModalHeader>
         <ModalBody>
           <form>
