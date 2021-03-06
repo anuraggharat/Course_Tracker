@@ -7,7 +7,7 @@ toast.configure();
 
 function App() {
   return (
-    <div className="bg-light App">
+    <div className="bg-light App min-vh-100">
       <div className="container py-4  min-vh-100">
         <Header />
         <Body />

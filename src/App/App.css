@@ -10,7 +10,10 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-*/ .float-btn {
+select::-ms-expand {
+  display: block;
+}
+.float-btn {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -23,7 +26,7 @@ body {
   margin-right: 10px;
   font-size: 12px;
   font-weight: 200;
-  background-color: blueviolet;
+  background-color: #0d6efd;
   color: white;
   border-radius: 20px;
   text-align: center;

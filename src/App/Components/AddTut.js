@@ -76,7 +76,7 @@ export default function AddTut(props) {
       <Modal isOpen={props.modal} toggle={props.toggle}>
         <ModalHeader>Add a new Tutorial</ModalHeader>
         <ModalBody>
-          <form onSubmit={(e) => onSubmit(e)}>
+          <form>
             <div className="form-group">
               <input
                 type="text"
@@ -158,7 +158,7 @@ export default function AddTut(props) {
                 value={chips}
                 onChange={onChange}
                 placeholder="Add relevent tags!"
-                className="form-control"
+                className="form-control my-2"
                 suggestions={[
                   "React",
                   "Vue",
@@ -173,14 +173,26 @@ export default function AddTut(props) {
                   "DevOps",
                   "ML",
                   "DL",
+                  "Cloud Computing",
+                  "C",
+                  "Java",
+                  "Python",
+                  "Testing",
                   "UI/UX",
                   "App",
                 ]}
               />
             </div>
-            <Button type="submit" color="primary" disabled={loading}>
-              Add
-            </Button>
+            <div className="form-group mt-3">
+              <Button
+                type="submit"
+                color="primary"
+                onClick={(e) => onSubmit(e)}
+                disabled={loading}
+              >
+                Add
+              </Button>
+            </div>
           </form>
         </ModalBody>
       </Modal>
