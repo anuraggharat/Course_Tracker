@@ -4,7 +4,7 @@ import Header from "./Components/Header";
 
 function App() {
   return (
-    <div className="bg-light">
+    <div className="bg-light App">
       <div className="container py-4  min-vh-100">
         <Header />
         <Body />

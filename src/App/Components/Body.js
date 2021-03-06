@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import AddTut from "./AddTut";
 import TutCard from "./TutCard";
 import { IoMdAdd } from "react-icons/io";
+import Loader from "./Loader";
 
 export default function Body() {
   const [modal, setModal] = useState(false);
@@ -28,11 +29,12 @@ export default function Body() {
   return (
     <div className="container">
       <AddTut toggle={toggle} modal={modal} loadCourses={loadCourses} />
-      <div className="row pt-4">
+      <div className="row  min-vh-100 pt-4">
         {!loading &&
           courses.map((item) => (
             <TutCard item={item} key={item.id} loadCourses={loadCourses} />
           ))}
+        {loading && <Loader />}
       </div>
       <button
         className="btn float-btn btn-primary rounded-0 d-flex align-items-center"
