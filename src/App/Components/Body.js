@@ -31,7 +31,8 @@ export default function Body() {
     <div className="container">
       <AddTut toggle={toggle} modal={modal} />
       <div className="row pt-4">
-        {!loading && courses.map((item) => <TutCard item={item} />)}
+        {!loading &&
+          courses.map((item) => <TutCard item={item} key={item.id} />)}
       </div>
       <button
         className="btn float-btn btn-primary rounded-0 d-flex align-items-center"

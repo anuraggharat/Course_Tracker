@@ -11,6 +11,7 @@ export default function AddTut(props) {
     note: "",
     status: "",
     priority: "",
+    type: "",
   });
 
   console.log(values);
@@ -23,13 +24,17 @@ export default function AddTut(props) {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = () => {};
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const body = { ...values, tags: chips };
+    console.log(body);
+  };
   return (
     <div>
       <Modal isOpen={props.modal} toggle={props.toggle}>
         <ModalHeader>Add a new Tutorial</ModalHeader>
         <ModalBody>
-          <form>
+          <form onSubmit={(e) => onSubmit(e)}>
             <div className="form-group">
               <input
                 type="text"
@@ -72,6 +77,29 @@ export default function AddTut(props) {
                 <option value="Done">Done</option>
               </select>
               <select
+                id="type"
+                className="form-control my-2"
+                name="type"
+                defaultValue={values.type}
+                onChange={(e) => onTextChange(e)}
+              >
+                <option value={values.status}>Select Type</option>
+                <option value="Front-End Development">
+                  Front-End Development
+                </option>
+                <option value="Back-End Development">
+                  Back-End Development
+                </option>
+                <option value="Database Technologies">
+                  Database Technologies
+                </option>
+                <option value="Devops">Devops</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="UI Design">UI Design</option>
+                <option value="Others">Others</option>
+              </select>
+              <select
                 id="status"
                 className="form-control my-2"
                 name="priority"
@@ -93,19 +121,26 @@ export default function AddTut(props) {
                   "React",
                   "Vue",
                   "Angular",
-                  "Node",
-                  "Express",
-                  "MongoDb",
+                  "JavaScript",
+                  "FrontEnd",
+                  "BackEnd",
+                  "Database",
+                  "Firebase",
+                  "HTML,CSS",
+                  "Blockchain",
+                  "DevOps",
+                  "ML",
+                  "DL",
+                  "UI/UX",
+                  "App",
                 ]}
               />
             </div>
+            <Button type="submit" color="primary">
+              Add
+            </Button>
           </form>
         </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={props.toggle}>
-            Add
-          </Button>
-        </ModalFooter>
       </Modal>
     </div>
   );

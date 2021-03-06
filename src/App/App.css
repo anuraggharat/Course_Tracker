@@ -9,12 +9,19 @@ body {
 .display-7 {
   font-size: 2rem;
 }
-.pill {
-  padding: 5px 20px;
-  font-size: 15px;
+.pills {
+  padding: 3px 10px;
+  margin-right: 10px;
+  font-size: 12px;
   font-weight: 200;
   background-color: blueviolet;
   color: white;
   border-radius: 20px;
   text-align: center;
+}
+.link {
+  text-decoration: none;
+}
+p {
+  font-size: 0.9rem;
 }
