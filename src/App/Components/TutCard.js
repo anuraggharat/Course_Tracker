@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { AiOutlineFire } from "react-icons/ai";
 import { BiPen, BiTrash } from "react-icons/bi";
+import { toast } from "react-toastify";
 
 export default function TutCard({ item, loadCourses }) {
   const deleteCourse = async () => {
@@ -12,8 +13,18 @@ export default function TutCard({ item, loadCourses }) {
         body: JSON.stringify({ id: item.id }),
       });
       loadCourses();
+      toast.success("Courses Deleted", {
+        autoClose: 2000,
+        hideProgressBar: true,
+        pauseOnFocusLoss: false,
+      });
     } catch (err) {
       console.error(err);
+      toast.error("Courses not deleted", {
+        autoClose: 2000,
+        hideProgressBar: true,
+        pauseOnFocusLoss: false,
+      });
     }
   };
 

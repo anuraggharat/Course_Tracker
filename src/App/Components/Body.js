@@ -3,6 +3,7 @@ import AddTut from "./AddTut";
 import TutCard from "./TutCard";
 import { IoMdAdd } from "react-icons/io";
 import Loader from "./Loader";
+import { toast } from "react-toastify";
 
 export default function Body() {
   const [modal, setModal] = useState(false);
@@ -18,8 +19,18 @@ export default function Body() {
       const courses = await res.json();
       setCourses(courses);
       setLoading(false);
+      toast.success("Courses Updated", {
+        autoClose: 2000,
+        hideProgressBar: true,
+        pauseOnFocusLoss: false,
+      });
     } catch (error) {
       setLoading(false);
+      toast.error("Unable to fetch Courses", {
+        autoClose: 2000,
+        hideProgressBar: true,
+        pauseOnFocusLoss: false,
+      });
     }
   };
 

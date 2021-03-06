@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import Chips from "react-chips";
+import { toast } from "react-toastify";
 
 export default function AddTut(props) {
   const [chips, setChips] = useState([]);
@@ -43,9 +44,17 @@ export default function AddTut(props) {
       setChips([]);
       setLoading(false);
       if (res.ok) {
-        alert("Course Added");
+        toast.success("Courses added", {
+          autoClose: 2000,
+          hideProgressBar: true,
+          pauseOnFocusLoss: false,
+        });
       } else {
-        alert("Unable to add Course");
+        toast.warning("Unable to add ", {
+          autoClose: 2000,
+          hideProgressBar: true,
+          pauseOnFocusLoss: false,
+        });
       }
       props.toggle();
     } catch (error) {
