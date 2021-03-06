@@ -25,3 +25,8 @@ body {
 p {
   font-size: 0.9rem;
 }
+.small {
+  font-size: 1.2rem;
+  margin: 0px 3px;
+  cursor: pointer;
+}
