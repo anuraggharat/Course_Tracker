@@ -1,7 +1,6 @@
 import "./App.css";
 import Body from "./Components/Body";
 import Header from "./Components/Header";
-import AddTut from "./Components/AddTut";
 
 function App() {
   return (

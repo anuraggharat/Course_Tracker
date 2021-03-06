@@ -2,7 +2,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .float-btn {
-  position: absolute;
+  position: fixed;
   bottom: 25px;
   right: 25px;
 }
@@ -12,6 +12,7 @@ body {
 .pill {
   padding: 5px 20px;
   font-size: 15px;
+  font-weight: 200;
   background-color: blueviolet;
   color: white;
   border-radius: 20px;
