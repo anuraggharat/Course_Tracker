@@ -5,14 +5,14 @@ body {
   border-radius: 15px !important;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-/* body {
+body {
   -ms-overflow-style: none;
-  scrollbar-width: none; } */
+  scrollbar-width: none;
+}
 select::-ms-expand {
   display: block;
 }
@@ -20,6 +20,9 @@ select::-ms-expand {
   position: fixed;
   bottom: 25px;
   right: 25px;
+  border-radius: 50% !important;
+  width: 50px;
+  height: 50px;
 }
 .display-7 {
   font-size: 2rem;

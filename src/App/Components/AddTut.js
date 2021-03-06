@@ -90,6 +90,7 @@ export default function AddTut(props) {
                 name="name"
                 value={values.name}
                 onChange={(e) => onTextChange(e)}
+                required
               />
               <input
                 type="text"
@@ -99,6 +100,7 @@ export default function AddTut(props) {
                 value={values.link}
                 name="link"
                 onChange={(e) => onTextChange(e)}
+                required
               />
               <textarea
                 className="form-control  my-2"
@@ -108,6 +110,7 @@ export default function AddTut(props) {
                 name="note"
                 value={values.note}
                 onChange={(e) => onTextChange(e)}
+                required
               ></textarea>
               <select
                 id="category"
