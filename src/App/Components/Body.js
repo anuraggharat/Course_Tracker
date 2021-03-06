@@ -29,7 +29,7 @@ export default function Body() {
   }, []);
   return (
     <div className="container">
-      <AddTut toggle={toggle} modal={modal} />
+      <AddTut toggle={toggle} modal={modal} loadCourses={loadCourses} />
       <div className="row pt-4">
         {!loading &&
           courses.map((item) => <TutCard item={item} key={item.id} />)}

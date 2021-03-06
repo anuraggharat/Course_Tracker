@@ -4,6 +4,7 @@ import Chips from "react-chips";
 
 export default function AddTut(props) {
   const [chips, setChips] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const [values, setValues] = useState({
     name: "",
@@ -24,10 +25,46 @@ export default function AddTut(props) {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const body = { ...values, tags: chips };
-    console.log(body);
+    try {
+      const res = await fetch("/api/courses", {
+        method: "POST",
+        body: JSON.stringify(body),
+      });
+      console.log(res);
+      setValues({
+        name: "",
+        link: "",
+        note: "",
+        status: "",
+        priority: "",
+        type: "",
+      });
+      setChips([]);
+      setLoading(false);
+      if (res.ok) {
+        alert("Course Added");
+      } else {
+        alert("Unable to add Course");
+      }
+      props.toggle();
+    } catch (error) {
+      console.log(error);
+      setValues({
+        name: "",
+        link: "",
+        note: "",
+        status: "",
+        priority: "",
+        type: "",
+      });
+      setChips([]);
+      setLoading(false);
+    }
+    props.loadCourses();
   };
   return (
     <div>
