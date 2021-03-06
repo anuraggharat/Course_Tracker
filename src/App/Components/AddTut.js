@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import Chips from "react-chips";
 
 export default function AddTut(props) {
@@ -15,8 +15,6 @@ export default function AddTut(props) {
     type: "",
   });
 
-  console.log(values);
-  console.log(chips);
   const onChange = (chips) => {
     setChips(chips);
   };
@@ -34,7 +32,6 @@ export default function AddTut(props) {
         method: "POST",
         body: JSON.stringify(body),
       });
-      console.log(res);
       setValues({
         name: "",
         link: "",
@@ -52,7 +49,6 @@ export default function AddTut(props) {
       }
       props.toggle();
     } catch (error) {
-      console.log(error);
       setValues({
         name: "",
         link: "",
@@ -173,7 +169,7 @@ export default function AddTut(props) {
                 ]}
               />
             </div>
-            <Button type="submit" color="primary">
+            <Button type="submit" color="primary" disabled={loading}>
               Add
             </Button>
           </form>

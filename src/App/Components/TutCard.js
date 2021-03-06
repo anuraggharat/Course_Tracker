@@ -7,7 +7,7 @@ export default function TutCard({ item }) {
     <div className="col-lg-4 col-sm-12 my-3">
       <Card className="border-0 shadow  ">
         <CardBody>
-          <a href={item.link} target="_blank" className="link">
+          <a href={item.link} target="_blank" className="link" rel="noreferrer">
             <CardTitle tag="h4">{item.name}</CardTitle>
           </a>
           <CardSubtitle tag="p" className="my-2 text-muted">

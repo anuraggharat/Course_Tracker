@@ -15,11 +15,9 @@ export default function Body() {
     try {
       const res = await fetch("/api/courses");
       const courses = await res.json();
-      console.log(courses);
       setCourses(courses);
       setLoading(false);
     } catch (error) {
-      console.error(error);
       setLoading(false);
     }
   };
