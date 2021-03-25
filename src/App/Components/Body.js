@@ -16,8 +16,11 @@ export default function Body() {
     setLoading(true);
     try {
       const res = await fetch("/api/courses");
-      const courses = await res.json();
-      setCourses(courses);
+
+      const data = await res.json();
+      console.log(data);
+
+      setCourses(data);
       setLoading(false);
       toast.success("Courses Updated", {
         autoClose: 2000,
@@ -33,7 +36,7 @@ export default function Body() {
       });
     }
   };
-
+  console.log(courses);
   useEffect(() => {
     loadCourses();
   }, []);

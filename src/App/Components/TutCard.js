@@ -61,11 +61,12 @@ export default function TutCard({ item, loadCourses }) {
             <div className="row">
               <h6 className="my-0 ">TAGS:</h6>
               <div className="d-flex mb-2 pt-2">
-                {item.tags.map((tag) => (
-                  <p className="pills" key={tag}>
-                    {tag}
-                  </p>
-                ))}
+                {item.tags &&
+                  item.tags.map((tag) => (
+                    <p className="pills" key={tag}>
+                      {tag}
+                    </p>
+                  ))}
               </div>
             </div>
 
